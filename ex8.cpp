@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+double distancia(double x1, double y1, double x2, double y2){
+    double dx = x2 - x1;
+    double dy = y2 - y1;
+    return sqrt(dx * dx + dy * dy); //calculo da distancia entre dois pontos 
+}
+
+int main() {
+    double x1, y1, x2, y2;
+
+    printf("Digite as coordenadas do primeiro ponto (x1; y1): ");
+    scanf("%lf %lf", &x1, &y1);
+
+    printf("Digite as coordenadas do segundo ponto (x2; y2): ");
+    scanf("%lf %lf", &x2, &y2);
+
+    printf("A distancia entre os pontos eh: %.2lf\n", distancia(x1, y1, x2, y2)); //chama a funcao do calculo da distancia 
+
+getchar();
+return (0);
+}
